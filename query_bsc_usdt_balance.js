@@ -25,7 +25,8 @@ ethers.Wallet.fromEncryptedJson(fs.readFileSync(filename), passphrase)
     const usdtContract = new ethers.Contract(usdtContractAddress, usdtContractABI, provider);
     usdtContract.balanceOf(wallet.address).then((balance) => {
         console.log(balance);
+        // print balance in USDT
+        console.log(ethers.formatEther(balance));
     });
-
 });
 
