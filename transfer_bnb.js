@@ -26,7 +26,7 @@ ethers.Wallet.fromEncryptedJson(fs.readFileSync(filename), passphrase)
     // Send BNB to the wallet
     walletWithProvider.sendTransaction({
         to: destination,
-        value: ethers.utils.parseEther(amount)
+        value: ethers.parseEther(amount)
     }).then((tx) => {
         console.log(tx);
     });
