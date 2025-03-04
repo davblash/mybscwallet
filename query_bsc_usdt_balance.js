@@ -14,6 +14,7 @@ ethers.Wallet.fromEncryptedJson(fs.readFileSync(filename), passphrase)
 
     // Connect to Binance Smart Chain
     const provider = new ethers.JsonRpcProvider("https://bsc-dataseed.binance.org/");
+    //const provider = new ethers.JsonRpcProvider("https://bsc-dataseed.nariox.org");
     const walletWithProvider = wallet.connect(provider);
 
     // Query USDT balance
